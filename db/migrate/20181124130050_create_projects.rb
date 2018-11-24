@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :description
       t.text :brief_description
-      t.references :organization
+      t.references :organizations
 
       t.timestamps
     end

@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   as :user do
     patch 'users' => 'users/registrations#update'
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :organizations, only: %i[index show create update destroy] do
+    get :members, on: :member
+  end
 end

@@ -5,11 +5,22 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
+
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
+
+# Auth
 gem 'devise', '~> 4.5.0'
 gem 'devise-jwt', '~> 0.5.8'
 gem 'devise_invitable', '~> 1.7.5'
+gem 'pundit', '~> 2.0'
+
+# JSON
+gem 'blueprinter', '0.8.0'
+gem 'oj', '3.7.1'
+
+gem 'api-pagination'
+gem 'pagy'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

@@ -7,11 +7,32 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+/node_modules
+/yarn-error.log
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/vendor/
+/.idea
+/.rvmrc
+/test/
+.rake_tasks~
+/public/uploads/
+/.ruby-gemset
+temp
+/config/database.yml
+/public/packs
+/public/packs-test
+yarn-debug.log*
+.yarn-integrity
+/backup/
 
 # Ignore uploaded files in development
 /storage/*
@@ -19,7 +40,15 @@
 
 .byebug_history
 
-.idea
+# Ignore application configuration
+/config/application.yml
+.DS_Store
+
+# Ignore Redis dump
+*.rdb
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignor docs
+/doc/*

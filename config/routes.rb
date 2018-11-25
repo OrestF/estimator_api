@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  root to: 'home#index'
+
+  devise_for :users, controllers: { registrations: 'users/registrations', invitations: 'users/invitations' }
   as :user do
     patch 'users' => 'users/registrations#update'
   end

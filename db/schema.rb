@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_24_140140) do
+ActiveRecord::Schema.define(version: 2018_11_25_145228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,11 +30,6 @@ ActiveRecord::Schema.define(version: 2018_11_24_140140) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "organizations_users", id: false, force: :cascade do |t|
-    t.bigint "organization_id", null: false
-    t.bigint "user_id", null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -94,11 +89,13 @@ ActiveRecord::Schema.define(version: 2018_11_24_140140) do
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
     t.integer "role", default: 0
+    t.bigint "organization_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invitations_count"], name: "index_users_on_invitations_count"
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
     t.index ["invited_by_type", "invited_by_id"], name: "index_users_on_invited_by_type_and_invited_by_id"
+    t.index ["organization_id"], name: "index_users_on_organization_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -106,4 +103,5 @@ ActiveRecord::Schema.define(version: 2018_11_24_140140) do
   add_foreign_key "marks", "users"
   add_foreign_key "reports", "projects"
   add_foreign_key "reports", "users"
+  add_foreign_key "users", "organizations"
 end

@@ -6,6 +6,7 @@ resource 'Organizations' do
 
   get '/organizations' do
     let!(:organizations) { create_list(:organization, 3) }
+    let(:admin) { create(:admin, organization: organizations.last) }
 
     context 'as admin' do
       let(:headers) { auth_headers(admin) }
@@ -20,7 +21,8 @@ resource 'Organizations' do
   end
 
   get '/organizations/:id' do
-    let!(:id) { create(:organization).id }
+    let!(:organization) { create(:organization) }
+    let!(:id) { organization.id }
 
     context 'as admin' do
       let(:headers) { auth_headers(admin) }
@@ -29,7 +31,7 @@ resource 'Organizations' do
         do_request
 
         expect(response_status).to eq 200
-        expect(json['name']).to eq Organization.last.name
+        expect(json['name']).to eq organization.name
       end
     end
   end
@@ -49,7 +51,7 @@ resource 'Organizations' do
           do_request
 
           expect(response_status).to eq 200
-          expect(json['id'].to_i).to eq Organization.last.id
+          expect(json['name']).to eq params[:name]
         end
       end
 

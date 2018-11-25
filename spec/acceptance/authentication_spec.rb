@@ -3,6 +3,7 @@ require 'rspec_api_documentation/dsl'
 
 resource 'Users' do
   header 'Content-Type', 'application/json'
+  header 'Accept', 'application/json'
 
   post 'users/sign_in' do
     with_options scope: :user, with_example: true do
@@ -18,7 +19,7 @@ resource 'Users' do
       it 'Sign in with correct email and password' do
         do_request
 
-        expect(response_status).to eq 200
+        expect(response_status).to eq 201
         expect(response_headers['Authorization']).to be_present
       end
     end

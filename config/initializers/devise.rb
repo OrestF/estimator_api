@@ -292,4 +292,6 @@ Devise.setup do |config|
     ]
     jwt.expiration_time = 1.day.to_i
   end
+
+  config.invite_for = 2.weeks
 end

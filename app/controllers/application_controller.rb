@@ -3,6 +3,7 @@ class ApplicationController < ActionController::API
   include ActionController::MimeResponds
   include Serialization
   before_action :authenticate_user!
+  respond_to :json
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
@@ -17,10 +18,6 @@ class ApplicationController < ActionController::API
   def policy_class
     @policy_class ||= "#{self.class.name.split('::').last.remove('Controller').singularize}Policy".constantize
   end
-
-  # def current_user
-  #   User.find(1)
-  # end
 
   private
 

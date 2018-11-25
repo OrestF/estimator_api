@@ -3,7 +3,8 @@ module Staff
     module Validations
       def self.included(klass)
         klass.class_eval do
-          validates :email, presence: true, uniqueness: true
+          validates :email, :organization, presence: true
+          validates :email, uniqueness: true
         end
       end
     end

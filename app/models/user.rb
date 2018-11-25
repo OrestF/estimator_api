@@ -7,10 +7,10 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :validatable, :jwt_authenticatable,
          jwt_revocation_strategy: Devise::JWT::RevocationStrategies::Null
 
-  has_and_belongs_to_many :organizations
   has_many :reports
   has_many :projects
   has_many :marks
+  belongs_to :organization
 
   def self.serializer
     Staff::Users::Serializer

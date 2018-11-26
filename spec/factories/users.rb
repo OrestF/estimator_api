@@ -6,11 +6,11 @@ FactoryBot.define do
     organization
 
     factory :admin do
-      role { 'admin' }
+      role 'admin'
     end
 
     factory :manager do
-      role { 'manager' }
+      role 'manager'
     end
   end
 end

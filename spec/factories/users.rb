@@ -12,5 +12,9 @@ FactoryBot.define do
     factory :manager do
       role 'manager'
     end
+
+    factory :worker do
+      role 'worker'
+    end
   end
 end

@@ -19,6 +19,10 @@ class ApplicationController < ActionController::API
     @policy_class ||= "#{self.class.name.split('::').last.remove('Controller').singularize}Policy".constantize
   end
 
+  def organization
+    @organization ||= current_user.try(:organization)
+  end
+
   private
 
   def user_not_authorized(error)

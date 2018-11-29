@@ -16,4 +16,6 @@ Rails.application.routes.draw do
       put :remove_estimators
     end
   end
+
+  resources :reports, only: %i[index show create destroy]
 end

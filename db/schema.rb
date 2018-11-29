@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_145228) do
 
   create_table "reports", force: :cascade do |t|
     t.integer "tech"
-    t.integer "status"
+    t.integer "status", default: 0
     t.bigint "user_id"
     t.bigint "project_id"
     t.datetime "created_at", null: false

@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    crud_response(@project, :with_estimators)
+    crud_response(@project, :full)
   end
 
   def create
@@ -57,9 +57,5 @@ class ProjectsController < ApplicationController
 
   def set_policy
     @policy_class = Estimation::Projects::Policy
-  end
-
-  def organization
-    @organization ||= current_user.organization
   end
 end

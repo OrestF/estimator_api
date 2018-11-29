@@ -25,6 +25,20 @@ class ProjectsController < ApplicationController
     crud_response(Estimation::Projects::Destroy.call(@project))
   end
 
+  def assign_estimators
+    @project = organization.projects.find(params[:project_id])
+    custom_authorize(@project)
+
+    crud_response(Estimation::Projects::AssignEstimators.call(@project, params[:estimator_ids]), :with_estimators)
+  end
+
+  def remove_estimators
+    @project = organization.projects.find(params[:project_id])
+    custom_authorize(@project)
+
+    crud_response(Estimation::Projects::RemoveEstimators.call(@project, params[:estimator_ids]), :with_estimators)
+  end
+
   private
 
   def project_create_params

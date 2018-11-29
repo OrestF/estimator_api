@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   end
 
   scope :organization do
-    resources :projects, only: %i[index show create update destroy]
+    resources :projects, only: %i[index show create update destroy] do
+      put :assign_estimators
+      put :remove_estimators
+    end
   end
 end

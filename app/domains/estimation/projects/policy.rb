@@ -20,6 +20,14 @@ module Estimation
       def destroy?
         create?
       end
+
+      def assign_estimators?
+        create?
+      end
+
+      def remove_estimators?
+        assign_estimators?
+      end
     end
   end
 end

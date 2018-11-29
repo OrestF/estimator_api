@@ -85,7 +85,7 @@ resource 'Projects' do
 
     let!(:id) { create(:project, organization: manager.organization).id }
 
-    context 'as admin' do
+    context 'as manager' do
       let(:headers) { auth_headers(manager) }
 
       context 'with required params' do
@@ -128,6 +128,66 @@ resource 'Projects' do
         expect(response_status).to eq 200
         expect(json['id']).to eq project.id
         expect(Project.find_by(id: json['id'])).to eq nil
+      end
+    end
+
+    let(:raw_post) { params.to_json }
+  end
+
+  put '/organization/projects/:project_id/assign_estimators' do
+    with_options with_example: true do
+      parameter :estimator_ids, required: true
+    end
+
+    let!(:project_id) { create(:project, organization: manager.organization).id }
+    let!(:estimators) { create_list(:user, 3, organization: manager.organization) }
+
+    context 'as manager' do
+      let(:headers) { auth_headers(manager) }
+
+      context 'with required params' do
+        let(:params) { { estimator_ids: estimators.map(&:id) } }
+
+        it 'Assign estimators' do
+          do_request
+
+          expect(response_status).to eq 200
+          expect(json['estimators'].map { |est| est['id'] }).to match_array(estimators.map(&:id))
+          expect(json['errors']).to_not be_present
+        end
+      end
+    end
+
+    let(:raw_post) { params.to_json }
+  end
+
+  put '/organization/projects/:project_id/remove_estimators' do
+    with_options with_example: true do
+      parameter :estimator_ids, required: true
+    end
+
+    let!(:project) { create(:project, organization: manager.organization) }
+    let!(:project_id) { project.id }
+    let!(:estimators) { create_list(:user, 3, organization: manager.organization) }
+
+    before do
+      project.estimators << estimators
+    end
+
+    context 'as manager' do
+      let(:headers) { auth_headers(manager) }
+
+      context 'with required params' do
+        let(:params) { { estimator_ids: estimators[0].id } }
+
+        it 'Remove assigned estimators' do
+          expect(project.estimators.count).to eq 3
+          do_request
+
+          expect(response_status).to eq 200
+          expect(json['estimators'].map { |est| est['id'] }).to match_array([estimators[1].id, estimators[2].id])
+          expect(json['errors']).to_not be_present
+        end
       end
     end
 

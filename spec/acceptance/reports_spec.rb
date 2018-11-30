@@ -4,26 +4,6 @@ require 'rspec_api_documentation/dsl'
 resource 'Reports' do
   let(:manager) { create(:manager) }
 
-  # TODO: move to projects controller
-  get '/reports' do
-    parameter :project_id, required: true
-
-    let!(:project) { create(:project, organization: manager.organization) }
-    let!(:reports) { create_list(:report, 3, project: project) }
-    let(:params) { { project_id: project.id } }
-
-    context 'as organization manager' do
-      let(:headers) { auth_headers(manager) }
-
-      it 'Get reports list' do
-        do_request
-
-        expect(response_status).to eq 200
-        expect(json.size).to eq 3
-      end
-    end
-  end
-
   get '/reports/:id' do
     context 'as worker who creates report' do
       let(:worker) { create(:worker) }

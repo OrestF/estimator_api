@@ -9,7 +9,6 @@ class User < ApplicationRecord
 
   has_many :reports
   has_and_belongs_to_many :projects
-  has_many :marks
   belongs_to :organization
 
   alias_attribute :estimations, :projects

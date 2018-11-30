@@ -1,13 +1,6 @@
 class ReportsController < ApplicationController
   before_action :set_policy
   before_action :set_report, only: %i[show destroy]
-  before_action :set_project, only: %i[index]
-
-  def index
-    custom_authorize(Report, organization: organization)
-
-    collection_response(@project.reports.all)
-  end
 
   def show
     crud_response(@report) # TODO: with tasks

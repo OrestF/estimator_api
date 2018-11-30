@@ -28,6 +28,10 @@ module Estimation
       def remove_estimators?
         assign_estimators?
       end
+
+      def reports?
+        user.manager? && user.member?(configs[:organization])
+      end
     end
   end
 end

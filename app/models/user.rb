@@ -8,8 +8,8 @@ class User < ApplicationRecord
          jwt_revocation_strategy: Devise::JWT::RevocationStrategies::Null
 
   has_many :reports
+  has_many :report_tasks, through: :reports
   has_and_belongs_to_many :projects
-  has_many :marks
   belongs_to :organization
 
   alias_attribute :estimations, :projects

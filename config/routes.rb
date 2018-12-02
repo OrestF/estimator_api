@@ -14,8 +14,10 @@ Rails.application.routes.draw do
     resources :projects, only: %i[index show create update destroy] do
       put :assign_estimators
       put :remove_estimators
+      get :reports
     end
   end
 
-  resources :reports, only: %i[index show create destroy]
+  resources :reports, only: %i[show create destroy]
+  resources :report_tasks
 end

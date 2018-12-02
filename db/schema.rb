@@ -10,21 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_145228) do
+ActiveRecord::Schema.define(version: 2018_11_30_154147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "marks", force: :cascade do |t|
-    t.float "optimistic"
-    t.float "pessimistic"
-    t.bigint "task_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["task_id"], name: "index_marks_on_task_id"
-    t.index ["user_id"], name: "index_marks_on_user_id"
-  end
 
   create_table "organizations", force: :cascade do |t|
     t.string "name"
@@ -47,6 +36,18 @@ ActiveRecord::Schema.define(version: 2018_11_25_145228) do
     t.bigint "user_id", null: false
   end
 
+  create_table "report_tasks", force: :cascade do |t|
+    t.float "optimistic"
+    t.float "pessimistic"
+    t.bigint "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.bigint "report_id"
+    t.index ["report_id"], name: "index_report_tasks_on_report_id"
+    t.index ["task_id"], name: "index_report_tasks_on_task_id"
+  end
+
   create_table "reports", force: :cascade do |t|
     t.integer "tech"
     t.integer "status", default: 0
@@ -56,11 +57,6 @@ ActiveRecord::Schema.define(version: 2018_11_25_145228) do
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_reports_on_project_id"
     t.index ["user_id"], name: "index_reports_on_user_id"
-  end
-
-  create_table "reports_tasks", id: false, force: :cascade do |t|
-    t.bigint "report_id", null: false
-    t.bigint "task_id", null: false
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -99,8 +95,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_145228) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "marks", "tasks"
-  add_foreign_key "marks", "users"
+  add_foreign_key "report_tasks", "tasks"
   add_foreign_key "reports", "projects"
   add_foreign_key "reports", "users"
   add_foreign_key "users", "organizations"

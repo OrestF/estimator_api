@@ -193,4 +193,23 @@ resource 'Projects' do
 
     let(:raw_post) { params.to_json }
   end
+
+  get '/organization/projects/:project_id/reports' do
+    parameter :project_id, required: true
+
+    let!(:project) { create(:project, organization: manager.organization) }
+    let!(:project_id) { project.id }
+    let!(:reports) { create_list(:report, 3, project: project) }
+
+    context 'as organization manager' do
+      let(:headers) { auth_headers(manager) }
+
+      it 'Get reports list' do
+        do_request
+
+        expect(response_status).to eq 200
+        expect(json.size).to eq 3
+      end
+    end
+  end
 end

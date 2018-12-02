@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_policy
-  before_action :set_project, only: %i[show update destroy members]
+  before_action :set_project, only: %i[show update destroy]
 
   def index
     custom_authorize(organization)
@@ -37,6 +37,13 @@ class ProjectsController < ApplicationController
     custom_authorize(@project)
 
     crud_response(Estimation::Projects::RemoveEstimators.call(@project, params[:estimator_ids]), :with_estimators)
+  end
+
+  def reports
+    @project = organization.projects.find(params[:project_id])
+    custom_authorize(@project, organization: organization)
+
+    collection_response(@project.reports.all)
   end
 
   private

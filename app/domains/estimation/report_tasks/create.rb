@@ -2,6 +2,11 @@ module Estimation
   module ReportTasks
     class Create < Mutators::Create
       def call
+        if report.blank?
+          record.errors.add(:report_id, "Report with id #{params[:report_id]} not found")
+          return record
+        end
+
         record.save
 
         record
@@ -16,15 +21,15 @@ module Estimation
       def task_attributes
         { name: params[:name],
           user_id: params[:user_id],
-          tech: report.tech }
+          tech: report&.tech }
       end
 
       def record
-        @record ||= model.new(params.except(:name).merge!(task_id: task.id, report_id: report.id))
+        @record ||= model.new(params.except(:name, :user_id).merge!(task_id: task.id, report_id: report&.id))
       end
 
       def report
-        @report ||= Report.find(params[:report_id])
+        @report ||= Report.find_by(id: params[:report_id])
       end
 
       def model

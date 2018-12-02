@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   before_action :set_report, only: %i[show destroy]
 
   def show
-    crud_response(@report) # TODO: with tasks
+    crud_response(@report, :with_report_tasks)
   end
 
   def create

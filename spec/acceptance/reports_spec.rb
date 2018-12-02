@@ -11,6 +11,7 @@ resource 'Reports' do
       let!(:report) { create(:report, project: project, user_id: worker.id) }
       let(:id) { report.id }
       let(:headers) { auth_headers(worker) }
+      let!(:report_tasks) { create_list(:report_task, 3, report_id: report.id) }
 
       it 'Get report' do
         do_request

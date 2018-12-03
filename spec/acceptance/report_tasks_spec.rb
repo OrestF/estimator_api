@@ -150,4 +150,25 @@ resource 'Report tasks' do
 
     let(:raw_post) { params.to_json }
   end
+
+  delete '/report_tasks/:id' do
+    let!(:project) { create(:project, organization: worker.organization) }
+    let!(:report) { create(:report, project: project, user_id: worker.id) }
+    let!(:report_task) { create(:report_task, report_id: report.id) }
+    let!(:id) { report_task.id }
+
+    context 'as worker' do
+      let(:headers) { auth_headers(worker) }
+
+      it 'Destroy report task' do
+        do_request
+
+        expect(response_status).to eq 200
+        expect(json['id']).to eq report_task.id
+        expect(ReportTask.find_by(id: json['id'])).to eq nil
+      end
+    end
+
+    let(:raw_post) { params.to_json }
+  end
 end

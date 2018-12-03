@@ -1,6 +1,6 @@
 class ReportTasksController < ApplicationController
   before_action :set_policy
-  before_action :set_report_task, only: %i[update]
+  before_action :set_report_task, only: %i[update destroy]
 
   def create
     custom_authorize(ReportTask, report_id: params[:report_task][:report_id])
@@ -10,6 +10,10 @@ class ReportTasksController < ApplicationController
 
   def update
     crud_response(Estimation::ReportTasks::Update.call(@report_task, update_report_tasks_params))
+  end
+
+  def destroy
+    crud_response(Estimation::ReportTasks::Destroy.call(@report_task))
   end
 
   private

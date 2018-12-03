@@ -8,6 +8,10 @@ module Estimation
       def update?
         user.report_task_ids.include?(record.id)
       end
+
+      def destroy?
+        update?
+      end
     end
   end
 end

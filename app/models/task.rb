@@ -1,4 +1,6 @@
 class Task < ApplicationRecord
+  include Tasks::Search
+
   has_many :report_tasks
   has_many :reports
 

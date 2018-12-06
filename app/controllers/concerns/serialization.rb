@@ -23,7 +23,8 @@ module Serialization
   end
 
   def serialize_collection(collection, view = nil)
-    collection.klass.name.constantize.serializer.render_as_hash(collection, view: view)
+    @serializer ||= collection.klass.name.constantize.serializer
+    @serializer.render_as_hash(collection, view: view)
   end
 
   def serialize_record(record, view = nil)

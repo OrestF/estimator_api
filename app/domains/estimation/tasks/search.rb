@@ -32,4 +32,3 @@ module Estimation
     end
   end
 end
-

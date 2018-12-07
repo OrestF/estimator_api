@@ -20,9 +20,9 @@ module Mutators
     attr_reader :record, :params
 
     def define_record(record)
-      return record if record.instance_of?(model)
+      return record if record.instance_of?(repo)
 
-      model.find(record)
+      repo.find(record)
     end
   end
 end

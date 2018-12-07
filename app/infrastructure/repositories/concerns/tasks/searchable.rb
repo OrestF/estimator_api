@@ -1,5 +1,5 @@
 module Tasks
-  module Search
+  module Searchable
     extend ActiveSupport::Concern
 
     included do

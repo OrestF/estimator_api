@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   def search
     custom_authorize(Task)
 
-    @serializer = Estimation::Tasks::Serializer
+    @serializer = TaskSerializer
     collection_response(Estimation::Tasks::Search.call(params[:query], params[:tech]).results)
   end
 

@@ -1,7 +1,7 @@
 module Estimation
   module ReportTasks
     class Update < Mutators::Update
-      def model
+      def repo
         ReportTask
       end
     end

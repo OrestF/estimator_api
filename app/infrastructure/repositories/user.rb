@@ -15,6 +15,6 @@ class User < ApplicationRecord
   alias_attribute :estimations, :projects
 
   def self.serializer
-    Staff::Users::Serializer
+    ::UserSerializer
   end
 end

@@ -1,7 +1,7 @@
 module Estimation
   module ReportTasks
     class Destroy < Mutators::Destroy
-      def model
+      def repo
         ReportTask
       end
     end

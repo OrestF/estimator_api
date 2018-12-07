@@ -1,7 +1,7 @@
 module Estimation
   module Projects
     class Destroy < Mutators::Destroy
-      def model
+      def repo
         Project
       end
     end

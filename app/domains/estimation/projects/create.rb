@@ -1,7 +1,7 @@
 module Estimation
   module Projects
     class Create < Mutators::Create
-      def model
+      def repo
         Project
       end
     end

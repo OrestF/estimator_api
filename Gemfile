@@ -22,6 +22,8 @@ gem 'oj', '3.7.1'
 gem 'api-pagination'
 gem 'pagy'
 
+gem 'searchkick', '~> 3.1', '>= 3.1.2'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible

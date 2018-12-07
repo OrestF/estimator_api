@@ -20,4 +20,9 @@ Rails.application.routes.draw do
 
   resources :reports, only: %i[show create destroy]
   resources :report_tasks
+  resources :tasks, only: [:show] do
+    collection do
+      get :search
+    end
+  end
 end

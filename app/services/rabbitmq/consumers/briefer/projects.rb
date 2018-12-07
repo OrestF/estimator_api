@@ -7,6 +7,8 @@ module Rabbitmq
 
         def work(msg)
           Sneakers.logger.info("Raw data: ##{msg}")
+          msg = JSON.parse(msg)
+          Estimation::Projects::Update.call(Project.find(msg['id']), brief_description: msg['brief'])
           ack!
         end
       end

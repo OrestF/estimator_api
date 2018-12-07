@@ -1,11 +1,11 @@
 class Organization < ApplicationRecord
+  include Staff::Organizations::Validations
+
   has_many :projects
   has_many :reports, through: :projects
   has_many :users
 
-  validates :name, presence: true, uniqueness: true
-
   def self.serializer
-    Staff::Organizations::Serializer
+    ::OrganizationSerializer
   end
 end

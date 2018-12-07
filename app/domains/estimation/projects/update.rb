@@ -1,7 +1,7 @@
 module Estimation
   module Projects
     class Update < Mutators::Update
-      def model
+      def repo
         Project
       end
     end

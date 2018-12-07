@@ -25,14 +25,14 @@ module Estimation
       end
 
       def record
-        @record ||= model.new(params.except(:name, :user_id).merge!(task_id: task.id, report_id: report&.id))
+        @record ||= repo.new(params.except(:name, :user_id).merge!(task_id: task.id, report_id: report&.id))
       end
 
       def report
         @report ||= Report.find_by(id: params[:report_id])
       end
 
-      def model
+      def repo
         ReportTask
       end
     end

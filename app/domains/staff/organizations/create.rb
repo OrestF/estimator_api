@@ -1,7 +1,7 @@
 module Staff
   module Organizations
     class Create < Mutators::Create
-      def model
+      def repo
         Organization
       end
     end

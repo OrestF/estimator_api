@@ -19,7 +19,7 @@ module Mutators
     attr_reader :params
 
     def record
-      @record ||= model.new(params)
+      @record ||= repo.new(params)
     end
   end
 end

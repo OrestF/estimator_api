@@ -21,7 +21,7 @@ resource 'Tasks' do
       let(:params) { { query: 'er uniq', tech: 'ruby' } }
 
       before do
-        Task.reindex
+        ::Task.reindex
       end
 
       it 'Search tasks' do

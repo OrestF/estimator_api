@@ -1,7 +1,7 @@
 module Staff
   module Organizations
     class Update < Mutators::Update
-      def model
+      def repo
         Organization
       end
     end

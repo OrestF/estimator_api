@@ -13,7 +13,7 @@ module Estimation
       end
 
       def call
-        model.search(@query, scope.merge!(pagination))
+        repo.search(@query, scope.merge!(pagination))
       end
 
       private
@@ -26,8 +26,8 @@ module Estimation
         { limit: @limit, offset: @offset }
       end
 
-      def model
-        Task
+      def repo
+        ::Task
       end
     end
   end

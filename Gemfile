@@ -24,7 +24,16 @@ gem 'pagy'
 
 gem 'searchkick', '~> 3.1', '>= 3.1.2'
 
+# AMQP
+gem 'bunny', '~> 2.9', '>= 2.9.2'
+gem 'sneakers', '~> 2.7'
+
+gem 'redis', '~> 4.0', '>= 4.0.3'
+gem 'sidekiq', '~> 5.2', '>= 5.2.3'
+
+# Boot
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'foreman', '~> 0.85.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -33,6 +42,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'apitome', '0.2.0'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'bunny-mock', '~> 1.7'
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'faker', '1.8.7'
   gem 'rspec_api_documentation', '6.1.0'

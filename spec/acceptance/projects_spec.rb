@@ -43,26 +43,28 @@ resource 'Projects' do
 
   post '/organization/projects' do
     with_options with_example: true do
-      parameter :name, required: true
-      parameter :description, required: false
+      parameter :project do
+        parameter :name, required: true
+        parameter :description, required: false
+      end
     end
 
     context 'as manager' do
       let(:headers) { auth_headers(manager) }
 
       context 'with required params' do
-        let(:params) { { name: Faker::Company.name, description: Faker::Lorem.sentence } }
+        let(:params) { { project: { name: Faker::Company.name, description: Faker::Lorem.sentence } } }
 
         it 'Create project' do
           do_request
 
           expect(response_status).to eq 200
-          expect(json['name']).to eq params[:name]
+          expect(json['name']).to eq params[:project][:name]
         end
       end
 
       context 'without required params' do
-        let(:params) { { name: nil } }
+        let(:params) { { project: { name: nil } } }
 
         it 'returns error response', document: false do
           do_request
@@ -78,9 +80,11 @@ resource 'Projects' do
 
   put '/organization/projects/:id' do
     with_options with_example: true do
-      parameter :name, required: false
-      parameter :description, required: false
-      parameter :brief_description, required: false
+      parameter :project do
+        parameter :name, required: false
+        parameter :description, required: false
+        parameter :brief_description, required: false
+      end
     end
 
     let!(:id) { create(:project, organization: manager.organization).id }
@@ -89,19 +93,19 @@ resource 'Projects' do
       let(:headers) { auth_headers(manager) }
 
       context 'with required params' do
-        let(:params) { { name: Faker::Company.name } }
+        let(:params) { { project: { name: Faker::Company.name } } }
 
         it 'Update project' do
           do_request
 
           expect(response_status).to eq 200
-          expect(json['name']).to eq params[:name]
+          expect(json['name']).to eq params[:project][:name]
           expect(json['errors']).to_not be_present
         end
       end
 
       context 'without required params' do
-        let(:params) { { name: nil } }
+        let(:params) { { project: { name: nil } } }
 
         it 'returns error response', document: false do
           do_request

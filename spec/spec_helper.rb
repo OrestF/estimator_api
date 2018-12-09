@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'database_cleaner'
 require 'devise/jwt/test_helpers'
+require "fakeredis"
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)

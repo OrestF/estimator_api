@@ -10,7 +10,7 @@ module Estimation
       end
 
       def avg_marks
-        avg = report_tasks.pluck('avg(optimistic), avg(pessimistic)').first
+        avg = report_tasks.pluck(Arel.sql('avg(optimistic), avg(pessimistic)')).first
         { optimistic: avg[0].round(1), pessimistic: avg[1].round(1) }
       end
     end

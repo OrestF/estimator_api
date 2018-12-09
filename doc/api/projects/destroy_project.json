@@ -1,0 +1,44 @@
+{
+  "resource": "Projects",
+  "resource_explanation": null,
+  "http_method": "DELETE",
+  "route": "/organization/projects/:id",
+  "description": "Destroy project",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/organization/projects/9",
+      "request_body": "{}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIzNDU0YTNmYy1lZjUxLTRjZWEtOTljNS00NmEzOTFjY2M4MmYifQ.aFkEqcoDhFLclVpfeLL3YeG2nlKBUpKZASVG-t97JbY",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 9,\n  \"brief_description\": \"Aut aut ut quia pariatur.\",\n  \"description\": \"Omnis voluptatem doloremque expedita quia.\",\n  \"name\": \"Kertzmann-Langworth\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e086cde0206ecc3dc972d284735fd553\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e73dfed0-3bb2-4fd4-b156-703d23f3da43",
+        "X-Runtime": "0.007051",
+        "Content-Length": "144"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

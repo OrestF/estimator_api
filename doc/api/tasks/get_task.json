@@ -1,0 +1,44 @@
+{
+  "resource": "Tasks",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/tasks/:id",
+  "description": "Get task",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/tasks/23",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4OSwiZXhwIjoxNTQ0NDQ0Mzg5LCJqdGkiOiJkNTUxNzEwYi0zZDNmLTQ1MTYtOGZlZC01MGIzMWM5MzFjMjEifQ.raDWx3xTyWYzaa2kRPEfrgaMCyDbqkf-pgNSZAHCyEQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 23,\n  \"average_marks\": {\n    \"optimistic\": 60687.7,\n    \"pessimistic\": 60582.8\n  },\n  \"name\": \"Quinten Christiansen\",\n  \"tech\": \"react_native\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"638c2f359677c7f565a385cf5699f9bc\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "401d9f1f-a43b-4e8d-9ebb-c762f6b03605",
+        "X-Runtime": "0.004667",
+        "Content-Length": "122"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

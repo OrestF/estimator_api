@@ -1,0 +1,48 @@
+{
+  "resource": "Report tasks",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/report_tasks",
+  "description": "Create report task and general task",
+  "explanation": "When there no appropriate task from autocomplete",
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "report_task",
+      "description": " report task"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/report_tasks",
+      "request_body": "{\"report_task\":{\"optimistic\":\"94221.05\",\"pessimistic\":\"76725.37\",\"report_id\":5,\"name\":\"Miguel Jenkins\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIyNmJlZjZhMS1iNzE4LTQyNGUtOTE4Yi05Njg1YWM0MTQ4ZWMifQ.F_lsKDjYFz3cv7emwdgugH_eTU23eVY0BiijAzWYON0",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 2,\n  \"description\": null,\n  \"name\": \"Miguel Jenkins\",\n  \"optimistic\": 94221.05,\n  \"pessimistic\": 76725.37,\n  \"tech\": \"python\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"6b118ff62f0fc30059a8b9dc91323f6a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "95639070-fcd0-4eea-8e6b-d9e122381c54",
+        "X-Runtime": "0.034449",
+        "Content-Length": "112"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

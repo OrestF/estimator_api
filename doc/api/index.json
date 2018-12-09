@@ -1,0 +1,228 @@
+{
+  "resources": [
+    {
+      "name": "Invitations",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Add password and accept invitation",
+          "link": "invitations/add_password_and_accept_invitation.json",
+          "groups": "all",
+          "route": "/users/invitation",
+          "method": "put"
+        },
+        {
+          "description": "Invite user to current organization by email",
+          "link": "invitations/invite_user_to_current_organization_by_email.json",
+          "groups": "all",
+          "route": "/users/invitation",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Organizations",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create organization",
+          "link": "organizations/create_organization.json",
+          "groups": "all",
+          "route": "/organizations",
+          "method": "post"
+        },
+        {
+          "description": "Get organization",
+          "link": "organizations/get_organization.json",
+          "groups": "all",
+          "route": "/organizations/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get organization members",
+          "link": "organizations/get_organization_members.json",
+          "groups": "all",
+          "route": "/organizations/:id/members",
+          "method": "get"
+        },
+        {
+          "description": "Get organizations list",
+          "link": "organizations/get_organizations_list.json",
+          "groups": "all",
+          "route": "/organizations",
+          "method": "get"
+        },
+        {
+          "description": "Update organization",
+          "link": "organizations/update_organization.json",
+          "groups": "all",
+          "route": "/organizations/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Assign estimators",
+          "link": "projects/assign_estimators.json",
+          "groups": "all",
+          "route": "/organization/projects/:project_id/assign_estimators",
+          "method": "put"
+        },
+        {
+          "description": "Create project",
+          "link": "projects/create_project.json",
+          "groups": "all",
+          "route": "/organization/projects",
+          "method": "post"
+        },
+        {
+          "description": "Destroy project",
+          "link": "projects/destroy_project.json",
+          "groups": "all",
+          "route": "/organization/projects/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Get project",
+          "link": "projects/get_project.json",
+          "groups": "all",
+          "route": "/organization/projects/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get projects list",
+          "link": "projects/get_projects_list.json",
+          "groups": "all",
+          "route": "/organization/projects",
+          "method": "get"
+        },
+        {
+          "description": "Get reports list",
+          "link": "projects/get_reports_list.json",
+          "groups": "all",
+          "route": "/organization/projects/:project_id/reports",
+          "method": "get"
+        },
+        {
+          "description": "Remove assigned estimators",
+          "link": "projects/remove_assigned_estimators.json",
+          "groups": "all",
+          "route": "/organization/projects/:project_id/remove_estimators",
+          "method": "put"
+        },
+        {
+          "description": "Update project",
+          "link": "projects/update_project.json",
+          "groups": "all",
+          "route": "/organization/projects/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Report tasks",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create report task",
+          "link": "report_tasks/create_report_task.json",
+          "groups": "all",
+          "route": "/report_tasks",
+          "method": "post"
+        },
+        {
+          "description": "Create report task and general task",
+          "link": "report_tasks/create_report_task_and_general_task.json",
+          "groups": "all",
+          "route": "/report_tasks",
+          "method": "post"
+        },
+        {
+          "description": "Destroy report task",
+          "link": "report_tasks/destroy_report_task.json",
+          "groups": "all",
+          "route": "/report_tasks/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Update report task",
+          "link": "report_tasks/update_report_task.json",
+          "groups": "all",
+          "route": "/report_tasks/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create report",
+          "link": "reports/create_report.json",
+          "groups": "all",
+          "route": "/reports",
+          "method": "post"
+        },
+        {
+          "description": "Destroy report",
+          "link": "reports/destroy_report.json",
+          "groups": "all",
+          "route": "/reports/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Get report",
+          "link": "reports/get_report.json",
+          "groups": "all",
+          "route": "/reports/:id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get task",
+          "link": "tasks/get_task.json",
+          "groups": "all",
+          "route": "/tasks/:id",
+          "method": "get"
+        },
+        {
+          "description": "Search tasks",
+          "link": "tasks/search_tasks.json",
+          "groups": "all",
+          "route": "/tasks/search",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Sign in with correct email and password",
+          "link": "users/sign_in_with_correct_email_and_password.json",
+          "groups": "all",
+          "route": "users/sign_in",
+          "method": "post"
+        },
+        {
+          "description": "Sign out doesn't require any params",
+          "link": "users/sign_out_doesn't_require_any_params.json",
+          "groups": "all",
+          "route": "/users/sign_out",
+          "method": "delete"
+        }
+      ]
+    }
+  ]
+}

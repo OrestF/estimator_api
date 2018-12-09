@@ -1,0 +1,48 @@
+{
+  "resource": "Organizations",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/organizations",
+  "description": "Create organization",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "organization",
+      "description": " organization"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/organizations",
+      "request_body": "{\"organization\":{\"name\":\"New name\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0MzU3OTg2LCJleHAiOjE1NDQ0NDQzODYsImp0aSI6IjRmMzQxMDQ3LWQ0MDgtNGY5Yi1hNTU3LTdlMTdhMDliMzQ0MiJ9.O0_jZ3XWIdulHT1-GLAMfbzbmGa00T2slqJl37UZ1Sc",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 10,\n  \"name\": \"New name\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8be3cd11cb617f4418371e29d12d1eeb\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b0cc489c-8194-4df8-8df9-d4bd09466272",
+        "X-Runtime": "0.005010",
+        "Content-Length": "27"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "resource": "Projects",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/organization/projects",
+  "description": "Get projects list",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/organization/projects",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIxODA2N2E2Yi1hZmI4LTQwOGEtYTM4Yi1hYjVlYjkyNjQyYjkifQ.EDSXJoeGWpNOs6QNtRNnAll8CXDk6Dp87vRoJKSAskY",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"brief_description\": \"Labore quas ipsa omnis voluptates ut aliquid ut est.\",\n    \"description\": \"Vitae quas quidem maiores.\",\n    \"name\": \"Morar, Wuckert and Medhurst\"\n  },\n  {\n    \"id\": 2,\n    \"brief_description\": \"Et corporis itaque tempora.\",\n    \"description\": \"Est et laudantium deserunt quidem sunt tenetur.\",\n    \"name\": \"Cassin, Wehner and Cormier\"\n  },\n  {\n    \"id\": 3,\n    \"brief_description\": \"Aut ut tenetur qui rem aut qui.\",\n    \"description\": \"Totam aut doloribus cum aut numquam quos.\",\n    \"name\": \"Kunde-Quitzon\"\n  }\n]",
+      "response_headers": {
+        "Per-Page": "20",
+        "Total": "3",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"98668115edc62274adb20a239fa969c4\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e775dcf9-9681-4434-9b7a-b3f06802fef1",
+        "X-Runtime": "0.009035",
+        "Content-Length": "468"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

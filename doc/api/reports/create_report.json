@@ -1,0 +1,48 @@
+{
+  "resource": "Reports",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/reports",
+  "description": "Create report",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "report",
+      "description": " report"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/reports",
+      "request_body": "{\"report\":{\"tech\":\"python\",\"project_id\":21}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1NCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4OCwiZXhwIjoxNTQ0NDQ0Mzg4LCJqdGkiOiJkZDNkOGMxMi00NTRkLTRiMGEtODJiNy1lMWNlMmM2NTVjZDYifQ.wzgXROeybJs6u1I_JHkF8lR8ALlSSJ_vWdjefl8lzmc",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 12,\n  \"status\": \"pending\",\n  \"tech\": \"python\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"18e10d07efe63dd05b229a865b1b520c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ab4baa8d-d302-4a81-a426-acbe3e94444b",
+        "X-Runtime": "0.010924",
+        "Content-Length": "44"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

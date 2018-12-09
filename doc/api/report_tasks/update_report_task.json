@@ -1,0 +1,48 @@
+{
+  "resource": "Report tasks",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/report_tasks/:id",
+  "description": "Update report task",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "report_task",
+      "description": " report task"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/report_tasks/3",
+      "request_body": "{\"report_task\":{\"optimistic\":\"61900.16\",\"pessimistic\":\"62852.28\",\"task_id\":4,\"description\":\"Dolores provident repudiandae qui quisquam.\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0MSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIxZTgyOTI1ZC1mMWI3LTQ1NDItODA4My1iYTIzYjJjYWVmYjAifQ.aIuT665wIIUMJE7hKxjzE_hLIhmbpgjjOFYPV2uRl84",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 3,\n  \"description\": \"Dolores provident repudiandae qui quisquam.\",\n  \"name\": \"Helga Langosh\",\n  \"optimistic\": 61900.16,\n  \"pessimistic\": 62852.28,\n  \"tech\": \"golang\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e909073f3d706d96c6430f0542391013\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "48ae267c-b76e-432c-8970-76a53aa6b46e",
+        "X-Runtime": "0.009409",
+        "Content-Length": "152"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "resource": "Projects",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/organization/projects/:id",
+  "description": "Get project",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/organization/projects/5",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNyIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiI3MDc2ZWQ5Yy04ODBmLTQ3MTctYThiMy02YTBmNzY5ZmFmODMifQ.rOamxbQdy6aHbyLZEy92JDaQgWJP4-y_6zY3eOj4CXs",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 5,\n  \"brief_description\": \"Magni est enim omnis sapiente molestias.\",\n  \"description\": \"Ullam voluptas expedita fugit vitae voluptas id totam cumque.\",\n  \"estimators\": [\n    {\n      \"id\": 18,\n      \"email\": \"isaias@kiehn.org\"\n    },\n    {\n      \"id\": 19,\n      \"email\": \"louisa_larson@beer.biz\"\n    }\n  ],\n  \"name\": \"Heller, D'Amore and McGlynn\",\n  \"reports\": [\n\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2e00506736a615bed999d6f8fd97ec2b\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b41d5b88-21d3-4247-9eae-1fa8a88356f4",
+        "X-Runtime": "0.020017",
+        "Content-Length": "294"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

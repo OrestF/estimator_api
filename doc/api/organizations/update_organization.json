@@ -1,0 +1,48 @@
+{
+  "resource": "Organizations",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/organizations/:id",
+  "description": "Update organization",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "organization",
+      "description": " organization"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/organizations/12",
+      "request_body": "{\"organization\":{\"name\":\"New name\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiJhYWVhMjI4Ny0zMWUzLTRkZTAtOWQ3YS0zNDJmNTNhODE0MzcifQ.eWwjir_H6v4ghzBIN7Nq1-tap7aCrFnmRpnEpBCW49k",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 12,\n  \"name\": \"New name\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e2f86b1640b996858cc323876fb60abd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "19e6299f-3137-4460-9ad5-2cf1f00b0c31",
+        "X-Runtime": "0.009438",
+        "Content-Length": "27"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "resource": "Reports",
+  "resource_explanation": null,
+  "http_method": "DELETE",
+  "route": "/reports/:id",
+  "description": "Destroy report",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/reports/13",
+      "request_body": "{}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1NiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4OCwiZXhwIjoxNTQ0NDQ0Mzg4LCJqdGkiOiIzMjI0MDBiMi1mZGY4LTRmMGUtOTQwOS1iMjg2YTQ0MTA2N2IifQ.4mzZCVu1wKfQ6Qs8W_I5eF99LwvFjrrD5Eq9CxemPiI",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 13,\n  \"status\": \"pending\",\n  \"tech\": \"react\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2d645ba13eb799f7ca392589ab520c45\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "4b5df5c1-3c10-49e6-8329-be8ce21721ee",
+        "X-Runtime": "0.009322",
+        "Content-Length": "43"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

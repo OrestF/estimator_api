@@ -1,0 +1,40 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "DELETE",
+  "route": "/users/sign_out",
+  "description": "Sign out doesn't require any params",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/users/sign_out",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "4b9db688-103a-4835-8d43-7090e703cee9",
+        "X-Runtime": "0.001133"
+      },
+      "response_content_type": null,
+      "curl": null
+    }
+  ]
+}

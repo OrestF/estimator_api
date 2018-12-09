@@ -38,8 +38,11 @@ gem 'foreman', '~> 0.85.0', require: false
 gem 'apitome', '0.2.0'
 gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
 gem 'faker', '1.8.7'
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+
+# Analytics
+gem "rubycritic", require: false
+gem "skylight"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

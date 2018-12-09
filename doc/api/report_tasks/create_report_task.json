@@ -1,0 +1,48 @@
+{
+  "resource": "Report tasks",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/report_tasks",
+  "description": "Create report task",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "report_task",
+      "description": " report task"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/report_tasks",
+      "request_body": "{\"report_task\":{\"optimistic\":\"29691.98\",\"pessimistic\":\"22015.09\",\"report_id\":4,\"task_id\":1,\"name\":\"Darien Moore\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNyIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiI0MmIyNTI0Ni0zMDVlLTRjZDItYWY5Mi1iMTk5MmM5OTY0OGYifQ.mRd86TjGJ6phwjcdE_TD6-EQERCVZz5BUtga3ll_VHE",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"description\": null,\n  \"name\": \"Wilfred Dicki\",\n  \"optimistic\": 29691.98,\n  \"pessimistic\": 22015.09,\n  \"tech\": \"golang\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"f9e8d424787420c83b4c00e317553702\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "3d835bf2-a778-4e8b-bc60-8f0ead9ee5df",
+        "X-Runtime": "0.027488",
+        "Content-Length": "111"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

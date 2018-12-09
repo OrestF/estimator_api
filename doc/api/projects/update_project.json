@@ -1,0 +1,48 @@
+{
+  "resource": "Projects",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/organization/projects/:id",
+  "description": "Update project",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "name": "project",
+      "description": " project"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/organization/projects/7",
+      "request_body": "{\"project\":{\"name\":\"Beier, Gutkowski and Jacobson\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIyODAzZjliMS0wYWMyLTRmNzktOWE3ZC0wNDcyMGRkZDlkMWYifQ.LQS8jK0S-Y5oY6Um8xKaP_u2y6-sPWomqAK0OX7xNHw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 7,\n  \"brief_description\": \"Perferendis animi harum corrupti tenetur vel.\",\n  \"description\": \"Sequi aperiam ea ea tempora mollitia corporis quaerat magnam.\",\n  \"name\": \"Beier, Gutkowski and Jacobson\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7c911812d691a5c352e8d4d5a6d7527c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "118e6e62-6d91-43a7-85f2-2c82474f4264",
+        "X-Runtime": "0.006405",
+        "Content-Length": "193"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

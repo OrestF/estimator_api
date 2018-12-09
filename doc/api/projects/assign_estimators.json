@@ -1,0 +1,49 @@
+{
+  "resource": "Projects",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/organization/projects/:project_id/assign_estimators",
+  "description": "Assign estimators",
+  "explanation": null,
+  "parameters": [
+    {
+      "with_example": true,
+      "required": true,
+      "name": "estimator_ids",
+      "description": " estimator ids"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/organization/projects/10/assign_estimators",
+      "request_body": "{\"estimator_ids\":[26,27,28]}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiJlMDY5YTg1Zi1lYmRhLTQ5MjYtYTYwMC0xNjQ0MTExZGM5YzAifQ.dMh3nwAWqtXDdZL-ccX_gS3PMv-1i6HWPS6dVa_zXpM",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 10,\n  \"brief_description\": \"Ipsam nihil a dolor recusandae est ex iste alias.\",\n  \"description\": \"Magnam fugit mollitia earum.\",\n  \"estimators\": [\n    {\n      \"id\": 26,\n      \"email\": \"jerel@halvorson.biz\"\n    },\n    {\n      \"id\": 27,\n      \"email\": \"isaias@larkin.biz\"\n    },\n    {\n      \"id\": 28,\n      \"email\": \"anya@metz.co\"\n    }\n  ],\n  \"name\": \"Weber, Bashirian and Breitenberg\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7de656d3f173969e9b61ff0e05822e89\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "493cd4f2-5075-4e1e-93cf-7cc5fb7d9ade",
+        "X-Runtime": "0.011824",
+        "Content-Length": "294"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "resource": "Organizations",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/organizations/:id",
+  "description": "Get organization",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/organizations/7",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0MzU3OTg2LCJleHAiOjE1NDQ0NDQzODYsImp0aSI6IjA2MjljZmE1LTZmYzEtNGY3Mi04YWIwLWNlZmRmYTFmNjk5YiJ9.Pyw2PYBM9CgwmVbv8vHwsDFa8BGP8tPHv5TWUL436rg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 7,\n  \"name\": \"Wyman, Stokes and Schneider\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2bd771ace9a256007833efec55e7f659\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "527e8367-0a98-4de7-8b79-73584e009a54",
+        "X-Runtime": "0.008756",
+        "Content-Length": "45"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

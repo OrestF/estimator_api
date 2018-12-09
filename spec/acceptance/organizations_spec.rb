@@ -38,25 +38,27 @@ resource 'Organizations' do
 
   post '/organizations' do
     with_options with_example: true do
-      parameter :name, required: true
+      parameter :organization do
+        parameter :name, required: true
+      end
     end
 
     context 'as admin' do
       let(:headers) { auth_headers(admin) }
 
       context 'with required params' do
-        let(:params) { { name: 'New name' } }
+        let(:params) { { organization: { name: 'New name' } } }
 
         it 'Create organization' do
           do_request
 
           expect(response_status).to eq 200
-          expect(json['name']).to eq params[:name]
+          expect(json['name']).to eq params[:organization][:name]
         end
       end
 
       context 'without required params' do
-        let(:params) { { name: nil } }
+        let(:params) { { organization: { name: nil } } }
 
         it 'returns error response', document: false do
           do_request
@@ -72,7 +74,9 @@ resource 'Organizations' do
 
   put '/organizations/:id' do
     with_options with_example: true do
-      parameter :name, required: false
+      parameter :organization do
+        parameter :name, required: false
+      end
     end
 
     let!(:id) { create(:organization).id }
@@ -81,13 +85,13 @@ resource 'Organizations' do
       let(:headers) { auth_headers(admin) }
 
       context 'with required params' do
-        let(:params) { { name: 'New name' } }
+        let(:params) { { organization: { name: 'New name' } } }
 
         it 'Update organization' do
           do_request
 
           expect(response_status).to eq 200
-          expect(json['name']).to eq params[:name]
+          expect(json['name']).to eq params[:organization][:name]
           expect(json['errors']).to_not be_present
         end
       end

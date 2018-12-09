@@ -6,3 +6,5 @@
 :queues:
   - [mailer, 1]
   - [default, 1]
+  - [amqp, 1]
+  - [producers, 1]

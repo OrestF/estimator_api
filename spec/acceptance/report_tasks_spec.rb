@@ -6,13 +6,15 @@ resource 'Report tasks' do
 
   post '/report_tasks' do
     with_options with_example: true do
-      parameter :name, 'string', required: true
-      parameter :tech, Estimation::Const::TECHNOLOGIES, required: true
-      parameter :optimistic, 'float', required: true
-      parameter :pessimistic, 'float', required: true
-      parameter :report_id, 'integer', required: true
-      parameter :task_id, 'integer', required: false
-      parameter :description, 'string', required: false
+      parameter :report_task do
+        parameter :name, 'string', required: true
+        parameter :tech, Estimation::Const::TECHNOLOGIES, required: true
+        parameter :optimistic, 'float', required: true
+        parameter :pessimistic, 'float', required: true
+        parameter :report_id, 'integer', required: true
+        parameter :task_id, 'integer', required: false
+        parameter :description, 'string', required: false
+      end
     end
 
     context 'as worker' do
@@ -94,10 +96,12 @@ resource 'Report tasks' do
 
   put '/report_tasks/:id' do
     with_options with_example: true do
-      parameter :optimistic, 'float', required: false
-      parameter :pessimistic, 'float', required: false
-      parameter :task_id, 'integer', required: false
-      parameter :description, 'string', required: false
+      parameter :report_task do
+        parameter :optimistic, 'float', required: false
+        parameter :pessimistic, 'float', required: false
+        parameter :task_id, 'integer', required: false
+        parameter :description, 'string', required: false
+      end
     end
 
     context 'as worker' do

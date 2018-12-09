@@ -61,6 +61,8 @@ group :test do
   gem 'json_spec', '1.1.5'
   gem 'rails-controller-testing', '1.0.2'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
+  gem 'fakeredis', '~> 0.7.0'
 end
 
 

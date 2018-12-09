@@ -20,7 +20,7 @@ module Estimation
       def brief_description
         return if record.description.blank?
 
-        Rabbitmq::Producers::Briefer::Projects.call(record)
+        Rabbitmq::Producers::ProjectsBrief.call(record)
       end
     end
   end

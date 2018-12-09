@@ -43,6 +43,8 @@ gem 'faker', '1.8.7'
 gem "rubycritic", require: false
 gem "skylight"
 
+gem 'mailjet'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

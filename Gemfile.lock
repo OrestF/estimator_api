@@ -291,6 +291,7 @@ GEM
       ruby_parser (~> 3.8)
       tty-which (~> 0.3.0)
       virtus (~> 1.0)
+    scout_apm (2.4.21)
     searchkick (3.1.2)
       activemodel (>= 4.2)
       elasticsearch (>= 5)
@@ -384,6 +385,7 @@ DEPENDENCIES
   rspec_api_documentation (= 6.1.0)
   rubocop (~> 0.60.0)
   rubycritic
+  scout_apm
   searchkick (~> 3.1, >= 3.1.2)
   sidekiq (~> 5.2, >= 5.2.3)
   skylight

@@ -40,8 +40,9 @@ gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
 gem 'faker', '1.8.7'
 
 # Analytics
-gem "rubycritic", require: false
-gem "skylight"
+gem 'rubycritic', require: false
+gem 'skylight'
+gem 'scout_apm'
 
 gem 'mailjet'
 

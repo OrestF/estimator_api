@@ -43,10 +43,8 @@ resource 'Projects' do
 
   post '/organization/projects' do
     with_options with_example: true do
-      parameter :project do
-        parameter :name, required: true
-        parameter :description, required: false
-      end
+      parameter :name, scope: :project, required: true
+      parameter :description, scope: :project, required: false
     end
 
     context 'as manager' do
@@ -80,11 +78,9 @@ resource 'Projects' do
 
   put '/organization/projects/:id' do
     with_options with_example: true do
-      parameter :project do
-        parameter :name, required: false
-        parameter :description, required: false
-        parameter :brief_description, required: false
-      end
+      parameter :name, scope: :project, required: false
+      parameter :description, scope: :project, required: false
+      parameter :brief_description, scope: :project, required: false
     end
 
     let!(:id) { create(:project, organization: manager.organization).id }
@@ -140,7 +136,7 @@ resource 'Projects' do
 
   put '/organization/projects/:project_id/assign_estimators' do
     with_options with_example: true do
-      parameter :estimator_ids, required: true
+      parameter :estimator_ids, scope: :project, required: true
     end
 
     let!(:project_id) { create(:project, organization: manager.organization).id }
@@ -150,7 +146,7 @@ resource 'Projects' do
       let(:headers) { auth_headers(manager) }
 
       context 'with required params' do
-        let(:params) { { estimator_ids: estimators.map(&:id) } }
+        let(:params) { { project: { estimator_ids: estimators.map(&:id) } } }
 
         it 'Assign estimators' do
           do_request
@@ -167,7 +163,7 @@ resource 'Projects' do
 
   put '/organization/projects/:project_id/remove_estimators' do
     with_options with_example: true do
-      parameter :estimator_ids, required: true
+      parameter :estimator_ids, scope: :project, required: true
     end
 
     let!(:project) { create(:project, organization: manager.organization) }
@@ -182,7 +178,7 @@ resource 'Projects' do
       let(:headers) { auth_headers(manager) }
 
       context 'with required params' do
-        let(:params) { { estimator_ids: estimators[0].id } }
+        let(:params) { { project: { estimator_ids: estimators[0].id } } }
 
         it 'Remove assigned estimators' do
           expect(project.estimators.count).to eq 3

@@ -29,14 +29,14 @@ class ProjectsController < ApplicationController
     @project = organization.projects.find(params[:project_id])
     custom_authorize(@project)
 
-    crud_response(Estimation::Projects::AssignEstimators.call(@project, params[:estimator_ids]), :with_estimators)
+    crud_response(Estimation::Projects::AssignEstimators.call(@project, params[:project][:estimator_ids]), :with_estimators)
   end
 
   def remove_estimators
     @project = organization.projects.find(params[:project_id])
     custom_authorize(@project)
 
-    crud_response(Estimation::Projects::RemoveEstimators.call(@project, params[:estimator_ids]), :with_estimators)
+    crud_response(Estimation::Projects::RemoveEstimators.call(@project, params[:project][:estimator_ids]), :with_estimators)
   end
 
   def reports

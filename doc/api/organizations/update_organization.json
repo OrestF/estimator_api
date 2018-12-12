@@ -8,8 +8,10 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "organization",
-      "description": " organization"
+      "scope": "organization",
+      "required": false,
+      "name": "name",
+      "description": "Organization name"
     }
   ],
   "response_fields": [
@@ -23,7 +25,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiJhYWVhMjI4Ny0zMWUzLTRkZTAtOWQ3YS0zNDJmNTNhODE0MzcifQ.eWwjir_H6v4ghzBIN7Nq1-tap7aCrFnmRpnEpBCW49k",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NSwiZXhwIjoxNTQ0NzEyMzQ1LCJqdGkiOiIzZTkyM2NiZC05ZTBkLTQ2NTQtYTQzMi1mNTJkOTIxMGY2YjIifQ.5eBf9QEyEz-LUXsBHK-KaKxpohubwIW_4XVtToczVuQ",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -37,8 +39,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"e2f86b1640b996858cc323876fb60abd\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "19e6299f-3137-4460-9ad5-2cf1f00b0c31",
-        "X-Runtime": "0.009438",
+        "X-Request-Id": "bd28a183-4b29-4a93-86fb-1d8d33e2c4fe",
+        "X-Runtime": "0.010638",
         "Content-Length": "27"
       },
       "response_content_type": "application/json; charset=utf-8",

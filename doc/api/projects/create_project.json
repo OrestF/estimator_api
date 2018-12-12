@@ -8,8 +8,17 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "project",
-      "description": " project"
+      "scope": "project",
+      "required": true,
+      "name": "name",
+      "description": "Project name"
+    },
+    {
+      "with_example": true,
+      "scope": "project",
+      "required": false,
+      "name": "description",
+      "description": "Project description"
     }
   ],
   "response_fields": [
@@ -19,11 +28,11 @@
     {
       "request_method": "POST",
       "request_path": "/organization/projects",
-      "request_body": "{\"project\":{\"name\":\"Greenholt-Nikolaus\",\"description\":\"Maiores eaque voluptatum incidunt officia illum animi.\"}}",
+      "request_body": "{\"project\":{\"name\":\"Bins, Welch and Crona\",\"description\":\"Ex quod et neque animi repudiandae enim sed debitis.\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIyZTExMWM2OS1iNGFmLTRmOWItYTNiYS0yODJjZjUyNjIzNjIifQ.Rg7dgOf3CavG1k9QJzydpZBRzwMzCHHCagpBCX8Gnc0",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiI1N2MwNmM1Mi03OGM4LTQ1ODItYmIyYy03M2Q0NDdhOTg5NmQifQ.bOJV0Y9WJ_xch9ZVfOR7nh-pxF3s2MyOGlIAbDNfMco",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,14 +41,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 6,\n  \"brief_description\": null,\n  \"description\": \"Maiores eaque voluptatum incidunt officia illum animi.\",\n  \"name\": \"Greenholt-Nikolaus\"\n}",
+      "response_body": "{\n  \"id\": 6,\n  \"brief_description\": null,\n  \"description\": \"Ex quod et neque animi repudiandae enim sed debitis.\",\n  \"name\": \"Bins, Welch and Crona\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"8c59d86ecd7b34ab453058189b6526fd\"",
+        "ETag": "W/\"39ba3583fb1b12e3795be95304ec3dae\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "109e513d-2541-407e-a867-8559542b38f5",
-        "X-Runtime": "0.014677",
-        "Content-Length": "132"
+        "X-Request-Id": "d8afd371-6d6f-4e66-ba2a-5056105d7e89",
+        "X-Runtime": "0.011688",
+        "Content-Length": "133"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -38,9 +38,7 @@ resource 'Organizations' do
 
   post '/organizations' do
     with_options with_example: true do
-      parameter :organization do
-        parameter :name, required: true
-      end
+      parameter :name, scope: :organization, required: true
     end
 
     context 'as admin' do
@@ -74,9 +72,7 @@ resource 'Organizations' do
 
   put '/organizations/:id' do
     with_options with_example: true do
-      parameter :organization do
-        parameter :name, required: false
-      end
+      parameter :name, scope: :organization, required: false
     end
 
     let!(:id) { create(:organization).id }
@@ -112,8 +108,6 @@ resource 'Organizations' do
   end
 
   get '/organizations/:id/members' do
-    parameter :search, with_example: true
-
     let!(:organization) { create(:organization) }
     let!(:id) { organization.id }
 

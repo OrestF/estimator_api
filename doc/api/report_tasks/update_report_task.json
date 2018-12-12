@@ -8,8 +8,31 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "report_task",
-      "description": " report task"
+      "scope": "report_task",
+      "required": false,
+      "name": "optimistic",
+      "description": "float"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "pessimistic",
+      "description": "float"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "task_id",
+      "description": "integer"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "description",
+      "description": "string"
     }
   ],
   "response_fields": [
@@ -19,11 +42,11 @@
     {
       "request_method": "PUT",
       "request_path": "/report_tasks/3",
-      "request_body": "{\"report_task\":{\"optimistic\":\"61900.16\",\"pessimistic\":\"62852.28\",\"task_id\":4,\"description\":\"Dolores provident repudiandae qui quisquam.\"}}",
+      "request_body": "{\"report_task\":{\"optimistic\":\"26315.59\",\"pessimistic\":\"90430.73\",\"task_id\":4,\"description\":\"Modi et minima alias quia atque reiciendis amet autem.\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0MSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIxZTgyOTI1ZC1mMWI3LTQ1NDItODA4My1iYTIzYjJjYWVmYjAifQ.aIuT665wIIUMJE7hKxjzE_hLIhmbpgjjOFYPV2uRl84",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0MSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiI3NjUwZDdhZi1iOTYzLTQ5YjQtOGNlNC0zODlhYTA2MTkxM2YifQ.un7sZuv-Dojard-wvIZhnUxqTIzeNXodFeOqecVgtXM",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,14 +55,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 3,\n  \"description\": \"Dolores provident repudiandae qui quisquam.\",\n  \"name\": \"Helga Langosh\",\n  \"optimistic\": 61900.16,\n  \"pessimistic\": 62852.28,\n  \"tech\": \"golang\"\n}",
+      "response_body": "{\n  \"id\": 3,\n  \"description\": \"Modi et minima alias quia atque reiciendis amet autem.\",\n  \"name\": \"Dr. Kylie Hane\",\n  \"optimistic\": 26315.59,\n  \"pessimistic\": 90430.73,\n  \"tech\": \"react\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"e909073f3d706d96c6430f0542391013\"",
+        "ETag": "W/\"2da6b3972131ca1d4a113b87a62fca0c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "48ae267c-b76e-432c-8970-76a53aa6b46e",
-        "X-Runtime": "0.009409",
-        "Content-Length": "152"
+        "X-Request-Id": "8174cd5a-1c08-47c0-b83f-bf4608285b22",
+        "X-Runtime": "0.012522",
+        "Content-Length": "163"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

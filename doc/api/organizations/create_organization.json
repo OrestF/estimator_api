@@ -8,8 +8,10 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "organization",
-      "description": " organization"
+      "scope": "organization",
+      "required": true,
+      "name": "name",
+      "description": "Organization name"
     }
   ],
   "response_fields": [
@@ -23,7 +25,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0MzU3OTg2LCJleHAiOjE1NDQ0NDQzODYsImp0aSI6IjRmMzQxMDQ3LWQ0MDgtNGY5Yi1hNTU3LTdlMTdhMDliMzQ0MiJ9.O0_jZ3XWIdulHT1-GLAMfbzbmGa00T2slqJl37UZ1Sc",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0NjI1OTQ1LCJleHAiOjE1NDQ3MTIzNDUsImp0aSI6IjRjNmFhNjI1LWVjMTctNDJjNC05Y2MzLTA1ODFhYTczMmM0ZCJ9.SeLPbXJCnoLWFvgItsWE6jWjvtMLpb7wdji7_oPF-b0",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -37,8 +39,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"8be3cd11cb617f4418371e29d12d1eeb\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b0cc489c-8194-4df8-8df9-d4bd09466272",
-        "X-Runtime": "0.005010",
+        "X-Request-Id": "25d38747-914b-402a-a612-99ff645f86b2",
+        "X-Runtime": "0.008573",
         "Content-Length": "27"
       },
       "response_content_type": "application/json; charset=utf-8",

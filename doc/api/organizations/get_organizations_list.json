@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0MzU3OTg2LCJleHAiOjE1NDQ0NDQzODYsImp0aSI6ImYxMjMxMzEwLTYxMTktNDk5NS05MjQ1LTA3Mjg3MmY2MDljMyJ9.2I3Mb6UNNJ_U6UQYXH0s-CX4-Y80Y08taFdok0VQt9o",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0NjI1OTQ1LCJleHAiOjE1NDQ3MTIzNDUsImp0aSI6IjEyNmRmMzc5LTMwNGYtNDQ1NS05ODViLWViZDcwMjFlODQ1MCJ9.OZ9wHSL6BKUOr_EghLXEpYoXx92_SLOztCR9uNCCdLQ",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -28,16 +28,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 4,\n    \"name\": \"Haley-Zemlak\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Kub-Mitchell\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Daniel-Hickle\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 4,\n    \"name\": \"Wiza LLC\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Renner-Mann\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Altenwerth-Will\"\n  }\n]",
       "response_headers": {
         "Per-Page": "20",
         "Total": "3",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d57023358ba683ad3df7c7e984a34db0\"",
+        "ETag": "W/\"4a407fef1dded18e7c7c9452e140d25d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "37a371fa-955d-43c2-aa59-70e8beeaaca5",
-        "X-Runtime": "0.004877",
-        "Content-Length": "95"
+        "X-Request-Id": "7ea0b3a2-9287-4d7c-ab48-437ae4415802",
+        "X-Runtime": "0.007592",
+        "Content-Length": "92"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

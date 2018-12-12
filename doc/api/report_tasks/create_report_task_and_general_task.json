@@ -8,8 +8,61 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "report_task",
-      "description": " report task"
+      "scope": "report_task",
+      "required": true,
+      "name": "name",
+      "description": "string"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "tech",
+      "description": [
+        "ruby",
+        "ruby_api",
+        "python",
+        "python_api",
+        "react",
+        "react_native",
+        "golang",
+        "design"
+      ]
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "optimistic",
+      "description": "float"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "pessimistic",
+      "description": "float"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "report_id",
+      "description": "integer"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "task_id",
+      "description": "integer"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "description",
+      "description": "string"
     }
   ],
   "response_fields": [
@@ -19,11 +72,11 @@
     {
       "request_method": "POST",
       "request_path": "/report_tasks",
-      "request_body": "{\"report_task\":{\"optimistic\":\"94221.05\",\"pessimistic\":\"76725.37\",\"report_id\":5,\"name\":\"Miguel Jenkins\"}}",
+      "request_body": "{\"report_task\":{\"optimistic\":\"34095.97\",\"pessimistic\":\"79009.94\",\"report_id\":5,\"name\":\"Tracey Gleichner\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIyNmJlZjZhMS1iNzE4LTQyNGUtOTE4Yi05Njg1YWM0MTQ4ZWMifQ.F_lsKDjYFz3cv7emwdgugH_eTU23eVY0BiijAzWYON0",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiJjOTY1YTgwMS0xNTI1LTRjNTgtODZlYy0yN2M3M2Y3OGIwYTYifQ.0wQR_yRM8yPN1wpg3153tO609MeYCmqHJUnxMwtKpQw",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,14 +85,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 2,\n  \"description\": null,\n  \"name\": \"Miguel Jenkins\",\n  \"optimistic\": 94221.05,\n  \"pessimistic\": 76725.37,\n  \"tech\": \"python\"\n}",
+      "response_body": "{\n  \"id\": 2,\n  \"description\": null,\n  \"name\": \"Tracey Gleichner\",\n  \"optimistic\": 34095.97,\n  \"pessimistic\": 79009.94,\n  \"tech\": \"react\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"6b118ff62f0fc30059a8b9dc91323f6a\"",
+        "ETag": "W/\"1f709d683ab0ed059a013a0059028da9\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "95639070-fcd0-4eea-8e6b-d9e122381c54",
-        "X-Runtime": "0.034449",
-        "Content-Length": "112"
+        "X-Request-Id": "d21af5e4-6d32-4cf8-85e6-f84bdf341dec",
+        "X-Runtime": "0.026068",
+        "Content-Length": "113"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

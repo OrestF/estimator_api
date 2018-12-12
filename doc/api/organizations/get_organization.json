@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0MzU3OTg2LCJleHAiOjE1NDQ0NDQzODYsImp0aSI6IjA2MjljZmE1LTZmYzEtNGY3Mi04YWIwLWNlZmRmYTFmNjk5YiJ9.Pyw2PYBM9CgwmVbv8vHwsDFa8BGP8tPHv5TWUL436rg",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTQ0NjI1OTQ1LCJleHAiOjE1NDQ3MTIzNDUsImp0aSI6IjgyMmQ5ZWEwLWI2NmYtNDE0Zi1hMDI0LTA3NDAyMjQ3M2Q1NyJ9.3mmLgnVwT00cbRV4SOFL8B7rYohn5i7X65f8GPJq8FM",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -28,14 +28,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 7,\n  \"name\": \"Wyman, Stokes and Schneider\"\n}",
+      "response_body": "{\n  \"id\": 7,\n  \"name\": \"Kshlerin LLC\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"2bd771ace9a256007833efec55e7f659\"",
+        "ETag": "W/\"b0eaaaf4778aa858d9d18ff72610175b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "527e8367-0a98-4de7-8b79-73584e009a54",
-        "X-Runtime": "0.008756",
-        "Content-Length": "45"
+        "X-Request-Id": "0704ab00-2029-4f9d-b9f6-01923d70f7b8",
+        "X-Runtime": "0.006127",
+        "Content-Length": "30"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

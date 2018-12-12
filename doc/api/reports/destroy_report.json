@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1NiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4OCwiZXhwIjoxNTQ0NDQ0Mzg4LCJqdGkiOiIzMjI0MDBiMi1mZGY4LTRmMGUtOTQwOS1iMjg2YTQ0MTA2N2IifQ.4mzZCVu1wKfQ6Qs8W_I5eF99LwvFjrrD5Eq9CxemPiI",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1NiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NywiZXhwIjoxNTQ0NzEyMzQ3LCJqdGkiOiI3YzhjNTU5YS1lNGJlLTQ5YjUtODAzYy01MzViYmRlMjc3Y2YifQ.n9dStuqiELf75EFW6ld72KdNSuhTk3o740HtttbnWm4",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -28,14 +28,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 13,\n  \"status\": \"pending\",\n  \"tech\": \"react\"\n}",
+      "response_body": "{\n  \"id\": 13,\n  \"status\": \"pending\",\n  \"tech\": \"design\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"2d645ba13eb799f7ca392589ab520c45\"",
+        "ETag": "W/\"b3e7c8e40c2a3b9948502cf9379269d8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4b5df5c1-3c10-49e6-8329-be8ce21721ee",
-        "X-Runtime": "0.009322",
-        "Content-Length": "43"
+        "X-Request-Id": "18708cde-9bf7-4b50-b6d2-d24a771b2894",
+        "X-Runtime": "0.009547",
+        "Content-Length": "44"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

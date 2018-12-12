@@ -6,11 +6,7 @@
   "description": "Get organization members",
   "explanation": "All organization members",
   "parameters": [
-    {
-      "with_example": true,
-      "name": "search",
-      "description": " search"
-    }
+
   ],
   "response_fields": [
 
@@ -23,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIzNWMxNWZlYy05MmUzLTRlNTMtODlkNS0yOTBjNTg2MjhlMGMifQ.W3B-rXyeQS0gX9fKejf9Skg1xZ9p5S4jqgJOU3Atltg",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NSwiZXhwIjoxNTQ0NzEyMzQ1LCJqdGkiOiI5M2JiOTQ2Yi02ZWY0LTQ4NmMtODlhNS05NjM3MmMyMTUyZTgifQ.7W-bQUtZOPS0edMppGsnDH2YxU9LCt7YY9AYa7RA6ek",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -33,16 +29,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 12,\n    \"email\": \"maymie@padbergabernathy.co\"\n  },\n  {\n    \"id\": 13,\n    \"email\": \"eula@hansen.info\"\n  },\n  {\n    \"id\": 14,\n    \"email\": \"kevin.witting@dubuque.com\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 14,\n    \"email\": \"mario_rogahn@heaney.org\"\n  },\n  {\n    \"id\": 13,\n    \"email\": \"velma@lehner.org\"\n  },\n  {\n    \"id\": 12,\n    \"email\": \"jared@baumbach.com\"\n  }\n]",
       "response_headers": {
         "Per-Page": "20",
         "Total": "3",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"bd14ff5a2e9fd4810053187b3fcfa2d1\"",
+        "ETag": "W/\"f37e39e940f0908f615edbab5fd9c818\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3603b7db-0487-4c53-ba3b-cb84422a3b7c",
-        "X-Runtime": "0.005377",
-        "Content-Length": "131"
+        "X-Request-Id": "3a66e53c-1b7b-4ee8-961d-27c0371b652b",
+        "X-Runtime": "0.005383",
+        "Content-Length": "121"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

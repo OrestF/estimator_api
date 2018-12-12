@@ -8,8 +8,24 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "project",
-      "description": " project"
+      "scope": "project",
+      "required": false,
+      "name": "name",
+      "description": "Project name"
+    },
+    {
+      "with_example": true,
+      "scope": "project",
+      "required": false,
+      "name": "description",
+      "description": "Project description"
+    },
+    {
+      "with_example": true,
+      "scope": "project",
+      "required": false,
+      "name": "brief_description",
+      "description": "Project brief description"
     }
   ],
   "response_fields": [
@@ -19,11 +35,11 @@
     {
       "request_method": "PUT",
       "request_path": "/organization/projects/7",
-      "request_body": "{\"project\":{\"name\":\"Beier, Gutkowski and Jacobson\"}}",
+      "request_body": "{\"project\":{\"name\":\"Ziemann, Johnson and Morar\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIyODAzZjliMS0wYWMyLTRmNzktOWE3ZC0wNDcyMGRkZDlkMWYifQ.LQS8jK0S-Y5oY6Um8xKaP_u2y6-sPWomqAK0OX7xNHw",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiIyNTc4NTk5NC1iYjg4LTQwNTUtYmE0OS0yOWM5NDZjMTQzMmIifQ.sLv4maJWemFt11OPGdFVDwJ6RXhnpKkX9wSP_DUbRlI",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,14 +48,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 7,\n  \"brief_description\": \"Perferendis animi harum corrupti tenetur vel.\",\n  \"description\": \"Sequi aperiam ea ea tempora mollitia corporis quaerat magnam.\",\n  \"name\": \"Beier, Gutkowski and Jacobson\"\n}",
+      "response_body": "{\n  \"id\": 7,\n  \"brief_description\": \"Consequatur eum vel alias qui vero inventore.\",\n  \"description\": \"Voluptatem nostrum aliquam ea.\",\n  \"name\": \"Ziemann, Johnson and Morar\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7c911812d691a5c352e8d4d5a6d7527c\"",
+        "ETag": "W/\"4e71fd477ae0f211f33f7a7a10a181c0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "118e6e62-6d91-43a7-85f2-2c82474f4264",
-        "X-Runtime": "0.006405",
-        "Content-Length": "193"
+        "X-Request-Id": "1569edd8-6532-479e-baa6-f969e18c1b28",
+        "X-Runtime": "0.007067",
+        "Content-Length": "159"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

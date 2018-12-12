@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4OSwiZXhwIjoxNTQ0NDQ0Mzg5LCJqdGkiOiJkNTUxNzEwYi0zZDNmLTQ1MTYtOGZlZC01MGIzMWM5MzFjMjEifQ.raDWx3xTyWYzaa2kRPEfrgaMCyDbqkf-pgNSZAHCyEQ",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NywiZXhwIjoxNTQ0NzEyMzQ3LCJqdGkiOiJkYTYwMzYwNy0xMmI2LTRiMDMtODc1ZC1kZGYxMDUyZDM5OGUifQ.KQnGCkbFDkya8DNQPLNAfNlp0tI2dvAdLcQVs5dPOh0",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -28,14 +28,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 23,\n  \"average_marks\": {\n    \"optimistic\": 60687.7,\n    \"pessimistic\": 60582.8\n  },\n  \"name\": \"Quinten Christiansen\",\n  \"tech\": \"react_native\"\n}",
+      "response_body": "{\n  \"id\": 23,\n  \"average_marks\": {\n    \"optimistic\": 32123.3,\n    \"pessimistic\": 40606.8\n  },\n  \"name\": \"Layla Upton PhD\",\n  \"tech\": \"python_api\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"638c2f359677c7f565a385cf5699f9bc\"",
+        "ETag": "W/\"1875cf4709e9de78283a01856e25365f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "401d9f1f-a43b-4e8d-9ebb-c762f6b03605",
-        "X-Runtime": "0.004667",
-        "Content-Length": "122"
+        "X-Request-Id": "e3b3363c-afc2-46f5-9a39-1036c5fb5b8d",
+        "X-Runtime": "0.005423",
+        "Content-Length": "115"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

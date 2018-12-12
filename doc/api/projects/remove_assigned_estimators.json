@@ -8,9 +8,10 @@
   "parameters": [
     {
       "with_example": true,
+      "scope": "project",
       "required": true,
       "name": "estimator_ids",
-      "description": " estimator ids"
+      "description": "Project estimator ids"
     }
   ],
   "response_fields": [
@@ -20,11 +21,11 @@
     {
       "request_method": "PUT",
       "request_path": "/organization/projects/11/remove_estimators",
-      "request_body": "{\"estimator_ids\":30}",
+      "request_body": "{\"project\":{\"estimator_ids\":30}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiI2NDI0NWZiMS01MjIwLTQ0NjQtODY3Ni03OTk4ODA4NzdlNmMifQ.h0S5pAjPy96ZPPlDGlxXzemZs1tNji6zyd-4JZHi05I",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiI0MzhkMDYxZi1iYjA2LTQxOTItYmI2Ni1jOTliM2I5OTM0ZjAifQ.-XElWewx4Yd5WiSlONLuFrMQI6VrzeFgc43mIFMzADY",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -33,14 +34,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 11,\n  \"brief_description\": \"Placeat expedita asperiores id inventore non qui in omnis.\",\n  \"description\": \"Fugit nobis ex eligendi animi.\",\n  \"estimators\": [\n    {\n      \"id\": 31,\n      \"email\": \"adella@schultz.com\"\n    },\n    {\n      \"id\": 32,\n      \"email\": \"cullen.welch@homenick.name\"\n    }\n  ],\n  \"name\": \"Jakubowski-Parker\"\n}",
+      "response_body": "{\n  \"id\": 11,\n  \"brief_description\": \"Praesentium rerum ut aut sed nihil quibusdam neque velit.\",\n  \"description\": \"Animi laboriosam et autem exercitationem.\",\n  \"estimators\": [\n    {\n      \"id\": 31,\n      \"email\": \"guiseppe_keler@purdy.co\"\n    },\n    {\n      \"id\": 32,\n      \"email\": \"tyler@thompson.net\"\n    }\n  ],\n  \"name\": \"Boyer-Reynolds\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"bb4da7c025eda3cb7aa2d6a6e12a9a45\"",
+        "ETag": "W/\"c8455f313fda3f50195e80e2a0284efc\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "be37f584-6703-48d6-b5e0-214441663a9b",
-        "X-Runtime": "0.011991",
-        "Content-Length": "265"
+        "X-Request-Id": "c33f4d9a-7ccf-4ee2-96d5-e336426d4d55",
+        "X-Runtime": "0.011900",
+        "Content-Length": "269"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

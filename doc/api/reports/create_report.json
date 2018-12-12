@@ -8,8 +8,26 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "report",
-      "description": " report"
+      "scope": "report",
+      "required": true,
+      "name": "tech",
+      "description": [
+        "ruby",
+        "ruby_api",
+        "python",
+        "python_api",
+        "react",
+        "react_native",
+        "golang",
+        "design"
+      ]
+    },
+    {
+      "with_example": true,
+      "scope": "report",
+      "required": true,
+      "name": "project_id",
+      "description": "integer"
     }
   ],
   "response_fields": [
@@ -19,11 +37,11 @@
     {
       "request_method": "POST",
       "request_path": "/reports",
-      "request_body": "{\"report\":{\"tech\":\"python\",\"project_id\":21}}",
+      "request_body": "{\"report\":{\"tech\":\"react_native\",\"project_id\":21}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1NCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4OCwiZXhwIjoxNTQ0NDQ0Mzg4LCJqdGkiOiJkZDNkOGMxMi00NTRkLTRiMGEtODJiNy1lMWNlMmM2NTVjZDYifQ.wzgXROeybJs6u1I_JHkF8lR8ALlSSJ_vWdjefl8lzmc",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1NCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiI3NTRmNTA3NS0xY2RhLTQwZDAtODNlYi0xYmM1YWQ1MzIwNmQifQ.KoBqYvX6boCOgtPqMXSU5VvqnC7AZqZ6vtNll3FWaQs",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,14 +50,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 12,\n  \"status\": \"pending\",\n  \"tech\": \"python\"\n}",
+      "response_body": "{\n  \"id\": 12,\n  \"status\": \"pending\",\n  \"tech\": \"react_native\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"18e10d07efe63dd05b229a865b1b520c\"",
+        "ETag": "W/\"c67b86e40300ce6776d8576dc4279d19\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ab4baa8d-d302-4a81-a426-acbe3e94444b",
-        "X-Runtime": "0.010924",
-        "Content-Length": "44"
+        "X-Request-Id": "e9df2642-8854-487d-93cb-877d07763b37",
+        "X-Runtime": "0.031724",
+        "Content-Length": "50"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

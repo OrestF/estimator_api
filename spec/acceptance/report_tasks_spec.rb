@@ -6,15 +6,13 @@ resource 'Report tasks' do
 
   post '/report_tasks' do
     with_options with_example: true do
-      parameter :report_task do
-        parameter :name, 'string', required: true
-        parameter :tech, Estimation::Const::TECHNOLOGIES, required: true
-        parameter :optimistic, 'float', required: true
-        parameter :pessimistic, 'float', required: true
-        parameter :report_id, 'integer', required: true
-        parameter :task_id, 'integer', required: false
-        parameter :description, 'string', required: false
-      end
+      parameter :name, 'string', scope: :report_task, required: true
+      parameter :tech, Estimation::Const::TECHNOLOGIES, scope: :report_task, required: true
+      parameter :optimistic, 'float', scope: :report_task, required: true
+      parameter :pessimistic, 'float', scope: :report_task, required: true
+      parameter :report_id, 'integer', scope: :report_task, required: true
+      parameter :task_id, 'integer', scope: :report_task, required: false
+      parameter :description, 'string', scope: :report_task, required: false
     end
 
     context 'as worker' do
@@ -96,12 +94,10 @@ resource 'Report tasks' do
 
   put '/report_tasks/:id' do
     with_options with_example: true do
-      parameter :report_task do
-        parameter :optimistic, 'float', required: false
-        parameter :pessimistic, 'float', required: false
-        parameter :task_id, 'integer', required: false
-        parameter :description, 'string', required: false
-      end
+      parameter :optimistic, 'float', scope: :report_task, required: false
+      parameter :pessimistic, 'float', scope: :report_task, required: false
+      parameter :task_id, 'integer', scope: :report_task, required: false
+      parameter :description, 'string', scope: :report_task, required: false
     end
 
     context 'as worker' do

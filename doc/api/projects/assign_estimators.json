@@ -8,9 +8,10 @@
   "parameters": [
     {
       "with_example": true,
+      "scope": "project",
       "required": true,
       "name": "estimator_ids",
-      "description": " estimator ids"
+      "description": "Project estimator ids"
     }
   ],
   "response_fields": [
@@ -20,11 +21,11 @@
     {
       "request_method": "PUT",
       "request_path": "/organization/projects/10/assign_estimators",
-      "request_body": "{\"estimator_ids\":[26,27,28]}",
+      "request_body": "{\"project\":{\"estimator_ids\":[26,27,28]}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiJlMDY5YTg1Zi1lYmRhLTQ5MjYtYTYwMC0xNjQ0MTExZGM5YzAifQ.dMh3nwAWqtXDdZL-ccX_gS3PMv-1i6HWPS6dVa_zXpM",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiJmMTc2NjRmYS1mYzZlLTQ1MGItODZlMy04ZTZjODNlMDJiNzEifQ.b0k9rWCaSiuAgsxLHZN3bDkDNhFziAVO5w5J7-vbDHQ",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -33,14 +34,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 10,\n  \"brief_description\": \"Ipsam nihil a dolor recusandae est ex iste alias.\",\n  \"description\": \"Magnam fugit mollitia earum.\",\n  \"estimators\": [\n    {\n      \"id\": 26,\n      \"email\": \"jerel@halvorson.biz\"\n    },\n    {\n      \"id\": 27,\n      \"email\": \"isaias@larkin.biz\"\n    },\n    {\n      \"id\": 28,\n      \"email\": \"anya@metz.co\"\n    }\n  ],\n  \"name\": \"Weber, Bashirian and Breitenberg\"\n}",
+      "response_body": "{\n  \"id\": 10,\n  \"brief_description\": \"Est perferendis velit quos.\",\n  \"description\": \"Sequi sint necessitatibus maxime rem repudiandae atque in iusto.\",\n  \"estimators\": [\n    {\n      \"id\": 26,\n      \"email\": \"charlene_fritsch@hegmann.org\"\n    },\n    {\n      \"id\": 27,\n      \"email\": \"maggie_towne@kunde.biz\"\n    },\n    {\n      \"id\": 28,\n      \"email\": \"clifford_turner@veum.co\"\n    }\n  ],\n  \"name\": \"Macejkovic-Daniel\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7de656d3f173969e9b61ff0e05822e89\"",
+        "ETag": "W/\"9258cca3d26874bd74342fb14055c365\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "493cd4f2-5075-4e1e-93cf-7cc5fb7d9ade",
-        "X-Runtime": "0.011824",
-        "Content-Length": "294"
+        "X-Request-Id": "c66dec63-00ba-4968-824a-fa68c826f9bb",
+        "X-Runtime": "0.014211",
+        "Content-Length": "318"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

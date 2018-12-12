@@ -40,10 +40,8 @@ resource 'Reports' do
 
   post '/reports' do
     with_options with_example: true do
-      parameter :report do
-        parameter :tech, Estimation::Const::TECHNOLOGIES, required: true
-        parameter :project_id, 'integer', required: true
-      end
+      parameter :tech, Estimation::Const::TECHNOLOGIES, scope: :report, required: true
+      parameter :project_id, 'integer', scope: :report, required: true
     end
 
     context 'as manager' do

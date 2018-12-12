@@ -23,7 +23,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiJjZGYxZWU5NC0zYjZkLTRmOWMtYmFlNS0yYzZiN2EzZTUyM2UifQ.eZ9vhU2QjY99JCJ4nbMkwSz-vou-sp4xbpXQNlB3AzM",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiJhNjg5ODRhNS05NzQxLTQ2ZTMtOWViNS05NTAwZGZkNmMxMmQifQ.nrorunlrdNURSkLoudPe4mGHbwVdsZqDLFY4OpPedeI",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,16 +32,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 1,\n    \"status\": \"pending\",\n    \"tech\": \"golang\"\n  },\n  {\n    \"id\": 2,\n    \"status\": \"pending\",\n    \"tech\": \"golang\"\n  },\n  {\n    \"id\": 3,\n    \"status\": \"pending\",\n    \"tech\": \"golang\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"status\": \"pending\",\n    \"tech\": \"golang\"\n  },\n  {\n    \"id\": 2,\n    \"status\": \"pending\",\n    \"tech\": \"python\"\n  },\n  {\n    \"id\": 3,\n    \"status\": \"pending\",\n    \"tech\": \"react\"\n  }\n]",
       "response_headers": {
         "Per-Page": "20",
         "Total": "3",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a73a5a86beaf9a4d196e60b37fdda3d8\"",
+        "ETag": "W/\"f26af377ee2147cfbcf8ca009274b0bb\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "de03efc5-b9a5-4683-8f6b-4d5d63a1018e",
-        "X-Runtime": "0.006487",
-        "Content-Length": "133"
+        "X-Request-Id": "d98e6c87-9a28-42db-b780-f17a676f6793",
+        "X-Runtime": "0.006434",
+        "Content-Length": "132"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

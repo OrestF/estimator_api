@@ -8,8 +8,61 @@
   "parameters": [
     {
       "with_example": true,
-      "name": "report_task",
-      "description": " report task"
+      "scope": "report_task",
+      "required": true,
+      "name": "name",
+      "description": "string"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "tech",
+      "description": [
+        "ruby",
+        "ruby_api",
+        "python",
+        "python_api",
+        "react",
+        "react_native",
+        "golang",
+        "design"
+      ]
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "optimistic",
+      "description": "float"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "pessimistic",
+      "description": "float"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": true,
+      "name": "report_id",
+      "description": "integer"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "task_id",
+      "description": "integer"
+    },
+    {
+      "with_example": true,
+      "scope": "report_task",
+      "required": false,
+      "name": "description",
+      "description": "string"
     }
   ],
   "response_fields": [
@@ -19,11 +72,11 @@
     {
       "request_method": "POST",
       "request_path": "/report_tasks",
-      "request_body": "{\"report_task\":{\"optimistic\":\"29691.98\",\"pessimistic\":\"22015.09\",\"report_id\":4,\"task_id\":1,\"name\":\"Darien Moore\"}}",
+      "request_body": "{\"report_task\":{\"optimistic\":\"61342.58\",\"pessimistic\":\"76188.22\",\"report_id\":4,\"task_id\":1,\"name\":\"Gabrielle Stamm\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNyIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiI0MmIyNTI0Ni0zMDVlLTRjZDItYWY5Mi1iMTk5MmM5OTY0OGYifQ.mRd86TjGJ6phwjcdE_TD6-EQERCVZz5BUtga3ll_VHE",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNyIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiJlN2NiOGNjMi0xMDcxLTRlYjAtOTM0Ni01M2U0MGQwNGYwYWMifQ.3ONC5S7S3d75iNtR02sIWfuD9fXE8F1viBCIJfenAgo",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -32,14 +85,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 1,\n  \"description\": null,\n  \"name\": \"Wilfred Dicki\",\n  \"optimistic\": 29691.98,\n  \"pessimistic\": 22015.09,\n  \"tech\": \"golang\"\n}",
+      "response_body": "{\n  \"id\": 1,\n  \"description\": null,\n  \"name\": \"Aleen Turner\",\n  \"optimistic\": 61342.58,\n  \"pessimistic\": 76188.22,\n  \"tech\": \"react_native\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f9e8d424787420c83b4c00e317553702\"",
+        "ETag": "W/\"ff8c59c4db8af230b2d7f5c7ce95fced\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3d835bf2-a778-4e8b-bc60-8f0ead9ee5df",
-        "X-Runtime": "0.027488",
-        "Content-Length": "111"
+        "X-Request-Id": "33b7efa2-6c1c-4c19-85c6-c8fa58a89521",
+        "X-Runtime": "0.025864",
+        "Content-Length": "116"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

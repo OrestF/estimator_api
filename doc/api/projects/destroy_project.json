@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDM1Nzk4NywiZXhwIjoxNTQ0NDQ0Mzg3LCJqdGkiOiIzNDU0YTNmYy1lZjUxLTRjZWEtOTljNS00NmEzOTFjY2M4MmYifQ.aFkEqcoDhFLclVpfeLL3YeG2nlKBUpKZASVG-t97JbY",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU0NDYyNTk0NiwiZXhwIjoxNTQ0NzEyMzQ2LCJqdGkiOiIxNWYxZWVmNy04MTFlLTQ1NTYtOTBhMy02NTI0NWRhMWY0N2EifQ.hFngUi6IyqY5I9Ic5yC_Nn9q2Ml-6RkVCQO9_eUVOhY",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -28,14 +28,14 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 9,\n  \"brief_description\": \"Aut aut ut quia pariatur.\",\n  \"description\": \"Omnis voluptatem doloremque expedita quia.\",\n  \"name\": \"Kertzmann-Langworth\"\n}",
+      "response_body": "{\n  \"id\": 9,\n  \"brief_description\": \"Eveniet aut impedit assumenda et.\",\n  \"description\": \"Rem temporibus delectus enim et tenetur tempore sit sapiente.\",\n  \"name\": \"Jerde-Bogisich\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"e086cde0206ecc3dc972d284735fd553\"",
+        "ETag": "W/\"e4a5d7ef77cebe401a3b25ca0e5b0523\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e73dfed0-3bb2-4fd4-b156-703d23f3da43",
-        "X-Runtime": "0.007051",
-        "Content-Length": "144"
+        "X-Request-Id": "0d818fc4-2706-4d6e-a05c-331289af1a3a",
+        "X-Runtime": "0.009317",
+        "Content-Length": "166"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

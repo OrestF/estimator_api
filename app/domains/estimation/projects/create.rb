@@ -6,7 +6,7 @@ module Estimation
 
         return record if record.errors.any?
 
-        brief_description
+        publish_event
 
         record
       end
@@ -17,10 +17,8 @@ module Estimation
 
       private
 
-      def brief_description
-        return if record.description.blank?
-
-        Rabbitmq::Producers::ProjectsBrief.call(record)
+      def publish_event
+        EVENTS.publish('projects.created', record: record)
       end
     end
   end
